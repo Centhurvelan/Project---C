@@ -18,7 +18,7 @@ from utils import (
     DOCUMENT_PROJECT_EXTENSIONS 
 )
 
-# Load environment variables from .env file
+# Load environment variables from .env file.
 load_dotenv()
 
 app = Flask(__name__)
