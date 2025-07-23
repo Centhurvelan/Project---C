@@ -1,0 +1,15 @@
+Flask
+pandas
+python-dotenv
+openai
+openpyxl
+python-docx
+pypdf
+python-pptx
+xlsxwriter
+werkzeug
+tabulate
+Pillow
+
+
+

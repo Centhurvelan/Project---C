@@ -1,0 +1,66 @@
+.login-container {
+    background-image: url('../public/background.jpeg');
+    /* background-color: aqua; */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 100px;
+  }
+  
+  .login-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    width: 300px;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-box label {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .login-box input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .login-box .required {
+    color: red;
+  }
+
+  .login-box .error {
+    color: red;
+    margin-top: -15px;
+  }
+  
+  .login-box button {
+    padding: 10px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+  }

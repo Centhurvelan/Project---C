@@ -1,0 +1,296 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    /* Blue to Purple Gradient */
+    color: #fff;
+    /* White text for contrast */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll on small screens */
+}
+
+/* Style for when loading overlay is active */
+body.loading-active {
+    overflow: hidden;
+    /* Prevent scrolling when overlay is active */
+}
+
+.container {
+    max-width: 1200px;
+    /* Increased max-width for the main container */
+}
+
+h1,
+h2 {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    /* Stronger text shadow */
+}
+
+.colorful-card {
+    background: rgba(255, 255, 255, 0.15);
+    /* Slightly transparent white */
+    border-radius: 20px;
+    /* More rounded corners */
+    backdrop-filter: blur(15px);
+    /* Stronger frosted glass effect */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    /* Deeper shadow */
+    transition: transform 0.3s ease;
+    /* Add transition for subtle hover effect */
+}
+
+.colorful-card:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+}
+
+.colorful-card label {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Smooth color transition for labels */
+}
+
+.custom-file-label {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+    border-radius: 8px;
+    /* Rounded file input */
+}
+
+.custom-file-label::after {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.custom-file-input:focus~.custom-file-label {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Enhanced Button Styles */
+.btn-primary {
+    background-color: #ff6b6b;
+    /* Vibrant Red */
+    border-color: #ff6b6b;
+    font-weight: bold;
+    padding: 12px 25px;
+    /* Slightly larger padding */
+    border-radius: 8px;
+    /* Rounded buttons */
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    /* Glow effect */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff4757;
+    /* Darker Red on hover */
+    border-color: #ff4757;
+    transform: translateY(-3px);
+    /* More pronounced lift */
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+    /* Stronger glow on hover */
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    /* Press down effect */
+    box-shadow: 0 2px 5px rgba(255, 71, 87, 0.4);
+    /* Reduced shadow on active */
+}
+
+/* Styles for the full-screen loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Slightly darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    /* Start hidden with opacity */
+    visibility: hidden;
+    /* Hide element completely when not visible */
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    /* Smooth transition */
+}
+
+.loading-overlay.d-none {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Override Bootstrap's d-none */
+.loading-overlay:not(.d-none) {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.loading-content {
+    padding: 2.5rem;
+    /* Larger padding */
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    /* Stronger blur for content */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    /* Deep shadow for content box */
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #ffec41 !important;
+    /* Yellow spinner */
+}
+
+.loading-overlay .spinner-border {
+    width: 5rem;
+    /* Even larger spinner for main overlay */
+    height: 5rem;
+    margin-bottom: 1.5rem;
+    border-width: .4em;
+    /* Thicker spinner border */
+}
+
+.loading-overlay p {
+    font-size: 1.8rem;
+    /* Larger main message */
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: #fff;
+    letter-spacing: 0.05em;
+    /* Slightly spaced out text */
+}
+
+.loading-overlay .sub-message {
+    font-size: 1.2rem;
+    /* Larger sub message */
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Styling for the DataFrame table */
+#dataframeOutput .table {
+    background-color: rgba(255, 255, 255, 0.98);
+    /* Nearly opaque white for table background */
+    color: #333;
+    border-radius: 12px;
+    /* More rounded table corners */
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    /* Enhanced table shadow */
+    width: 100%;
+    min-width: 900px;
+}
+
+#dataframeOutput .table thead {
+    background-color: #16a085;
+    /* Darker teal header */
+    color: #fff;
+}
+
+#dataframeOutput .table thead th {
+    border-bottom: 2px solid #138d75;
+    /* Darker teal border */
+    font-weight: bold;
+    padding: 1rem 0.75rem;
+    /* More padding for header cells */
+}
+
+#dataframeOutput .table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+    /* Lighter grey for even rows */
+}
+
+#dataframeOutput .table tbody tr:hover {
+    background-color: #e8e8e8;
+    /* More distinct hover effect */
+    cursor: default;
+    transition: background-color 0.2s ease;
+    /* Smooth hover transition */
+}
+
+#dataframeOutput .table td,
+#dataframeOutput .table th {
+    border-color: #e0e0e0;
+    /* Lighter border for cells */
+    padding: 0.85rem;
+    /* Slightly more cell padding */
+    vertical-align: middle;
+}
+
+.responsive-table {
+    max-height: 550px;
+    /* Slightly increased max height */
+    overflow-y: auto;
+    border: 1px solid #dcdcdc;
+    /* Lighter border around scrollable area */
+    border-radius: 0.5rem;
+    /* More rounded scrollable area */
+    overflow-x: auto;
+}
+
+.alert {
+    margin-top: 20px;
+    /* More space above alerts */
+    border-radius: 8px;
+    /* Rounded alerts */
+    font-weight: 500;
+}
+
+/* Enhanced Download button */
+.btn-success {
+    background-color: #28a745;
+    /* Bootstrap's default success green */
+    border-color: #28a745;
+    font-weight: bold;
+    padding: 12px 25px;
+    /* Consistent padding with primary button */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    /* Glow effect */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(33, 136, 56, 0.6);
+    /* Stronger glow on hover */
+}
+
+.btn-success:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(33, 136, 56, 0.4);
+}

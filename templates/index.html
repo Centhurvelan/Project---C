@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Project Evaluator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <!-- The full-screen loading overlay -->
+    <div id="loadingOverlay" class="loading-overlay d-none">
+        <div class="loading-content">
+            <div class="spinner-border text-info" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <p class="mt-3">Analyzing your project with Azure OpenAI...</p>
+            <p class="sub-message">Please do not close or refresh this page.</p>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Software Project Evaluator</h1>
+
+        <div class="card p-4 shadow-lg colorful-card">
+            <h2 class="card-title text-center mb-4">Upload Project Files</h2>
+            <form id="uploadForm">
+                <div class="form-group mb-3">
+                    <label for="rubricFile">Evaluation Rubric (Excel .xlsx, .xls)</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="rubricFile" name="rubricFile"
+                            accept=".xlsx,.xls" required>
+                        <label class="custom-file-label" for="rubricFile" id="rubricFile_label">Choose rubric
+                            file...</label>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="projectZip">Project Files (ZIP containing code, screenshots, videos)</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="projectZip" name="projectZip" accept=".zip"
+                            required>
+                        <label class="custom-file-label" for="projectZip" id="projectZip_label">Choose project
+                            ZIP...</label>
+                    </div>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="requirementsFile">Requirement Document (Word .docx, PDF)</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="requirementsFile" name="requirementsFile"
+                            accept=".docx,.pdf" required>
+                        <label class="custom-file-label" for="requirementsFile" id="requirementsFile_label">Choose
+                            requirements file...</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="analyzeBtn">
+                    <i class="fas fa-play-circle"></i> Analyze Project
+                </button>
+            </form>
+
+            <div id="messages" class="mt-3">
+                <!-- Flash messages will appear here -->
+            </div>
+
+            <!-- Removed the redundant loadingSpinner div from here -->
+
+        </div>
+
+        <!-- NEW: Results Container for HTML Table and Download Button -->
+        <div id="resultsContainer" class="mt-5 d-none">
+            <h2 class="text-center mb-4">Evaluation Results</h2>
+            <div id="dataframeOutput" class="table-responsive">
+                <!-- DataFrame will be loaded here by JavaScript -->
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" id="downloadReportBtn" class="btn btn-success btn-lg" download="evaluated_report.xlsx">
+                    <i class="fas fa-file-excel"></i> Download Excel Report
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

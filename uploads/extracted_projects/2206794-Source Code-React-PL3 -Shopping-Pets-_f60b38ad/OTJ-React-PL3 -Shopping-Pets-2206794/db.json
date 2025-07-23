@@ -1,0 +1,280 @@
+{
+  "users": [
+    {
+      "firstName": "admin",
+      "lastName": "admin",
+      "password": "admin",
+      "email": "admin@gmail.com",
+      "id": 1
+    },
+    {
+      "firstName": "admin",
+      "lastName": "admin",
+      "password": "admin",
+      "email": "admin1@gmail.com",
+      "id": 2
+    },
+    {
+      "firstName": "admin",
+      "lastName": "admin",
+      "password": "admin",
+      "email": "admin2@gmail.com",
+      "id": 3
+    },
+    {
+      "firstName": "Deepak",
+      "lastName": "Kumar",
+      "email": "deepak@gmail.com",
+      "password": "deepak",
+      "id": 4
+    },
+    {
+      "firstName": "Ashutosh",
+      "lastName": "Kumar",
+      "email": "ashutosh@gmail.com",
+      "password": "ashutosh",
+      "id": 5
+    },
+    {
+      "firstName": "Sandeep",
+      "lastName": "Mandal",
+      "email": "sandeep@gmail.com",
+      "password": "sandeep",
+      "id": 6
+    }
+  ],
+  "orders": [
+    {
+      "imgUrl": "/assets/image/dog1.jpg",
+      "price": 10000,
+      "count": "10",
+      "userId": "admin@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 1
+    },
+    {
+      "imgUrl": "/assets/image/dog2.jpg",
+      "price": 8000,
+      "count": "10",
+      "userId": "admin1@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 2
+    },
+    {
+      "imgUrl": "/assets/image/dog3.jpg",
+      "price": 7500,
+      "count": "2",
+      "userId": "admin@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 3
+    },
+    {
+      "imgUrl": "/assets/image/bird1.jpg",
+      "price": 2500,
+      "count": "1",
+      "userId": "admin@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 4
+    },
+    {
+      "imgUrl": "/assets/image/bird6.jpg",
+      "price": 800,
+      "count": "9",
+      "userId": "admin@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 5
+    },
+    {
+      "imgUrl": "/assets/image/bird3.jpg",
+      "price": 4000,
+      "count": "20",
+      "userId": "admin@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 6
+    },
+    {
+      "imgUrl": "/assets/image/dog6.jpg",
+      "price": 8000,
+      "count": "10",
+      "userId": "admin@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 7
+    },
+    {
+      "imgUrl": "/assets/image/dog5.jpg",
+      "price": 12000,
+      "count": "3",
+      "userId": "admin@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 8
+    },
+    {
+      "imgUrl": "/assets/image/dog1.jpg",
+      "price": 10000,
+      "count": "10",
+      "userId": "admin@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 9
+    },
+    {
+      "imgUrl": "/assets/image/dog1.jpg",
+      "price": 2500,
+      "count": "10",
+      "userId": "admin1@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 10
+    },
+    {
+      "imgUrl": "/assets/image/dog2.jpg",
+      "price": 8000,
+      "count": "3",
+      "userId": "admin1@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 11
+    },
+    {
+      "imgUrl": "/assets/image/dog1.jpg",
+      "price": 10000,
+      "count": "12",
+      "userId": "admin1@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 12
+    },
+    {
+      "imgUrl": "/assets/image/bird1.jpg",
+      "price": 800,
+      "count": "10",
+      "userId": "admin1@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 13
+    },
+    {
+      "imgUrl": "/assets/image/dog5.jpg",
+      "price": 10000,
+      "count": "10",
+      "userId": "deepak@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 14
+    },
+    {
+      "imgUrl": "/assets/image/dog6.jpg",
+      "price": 10000,
+      "count": "10",
+      "userId": "deepak@gmail.com",
+      "purchased_date": "Wed May 31 2023",
+      "id": 15
+    },
+    {
+      "imgUrl": "/assets/image/bird1.jpg",
+      "price": 10000,
+      "count": "2",
+      "userId": "deepak@gmail.com",
+      "purchased_date": "Fri Apr 11 2025",
+      "id": 16
+    },
+    {
+      "imgUrl": "/assets/image/bird3.jpg",
+      "price": 7500,
+      "count": "1",
+      "userId": "deepak@gmail.com",
+      "purchased_date": "Fri Apr 11 2025",
+      "id": 17
+    },
+    {
+      "imgUrl": "/assets/image/dog6.jpg",
+      "price": 8000,
+      "count": "1",
+      "userId": "deepak@gmail.com",
+      "purchased_date": "Fri Apr 11 2025",
+      "id": 18
+    },
+    {
+      "imgUrl": "/assets/image/dog5.jpg",
+      "price": 12000,
+      "count": "3",
+      "userId": "deepak@gmail.com",
+      "purchased_date": "Fri Apr 11 2025",
+      "id": 19
+    },
+    {
+      "imgUrl": "/assets/image/dog2.jpg",
+      "price": 8000,
+      "count": "3",
+      "userId": "deepak@gmail.com",
+      "purchased_date": "Fri Apr 11 2025",
+      "id": 20
+    },
+    {
+      "imgUrl": "/assets/image/dog5.jpg",
+      "price": 12000,
+      "count": "2",
+      "userId": "ashutosh@gmail.com",
+      "purchased_date": "Fri Apr 11 2025",
+      "id": 21
+    }
+  ],
+  "dogs": [
+    {
+      "id": 1,
+      "image": "/assets/image/dog1.jpg",
+      "price": 10000
+    },
+    {
+      "id": 2,
+      "image": "/assets/image/dog2.jpg",
+      "price": 8000
+    },
+    {
+      "id": 3,
+      "image": "/assets/image/dog3.jpg",
+      "price": 7500
+    },
+    {
+      "id": 4,
+      "image": "/assets/image/dog4.jpg",
+      "price": 5000
+    },
+    {
+      "id": 5,
+      "image": "/assets/image/dog5.jpg",
+      "price": 12000
+    },
+    {
+      "id": 6,
+      "image": "/assets/image/dog6.jpg",
+      "price": 8000
+    }
+  ],
+  "birds": [
+    {
+      "id": 1,
+      "image": "/assets/image/bird1.jpg",
+      "price": 10000
+    },
+    {
+      "id": 2,
+      "image": "/assets/image/bird2.jpg",
+      "price": 8000
+    },
+    {
+      "id": 3,
+      "image": "/assets/image/bird3.jpg",
+      "price": 7500
+    },
+    {
+      "id": 4,
+      "image": "/assets/image/bird4.jpg",
+      "price": 5000
+    },
+    {
+      "id": 5,
+      "image": "/assets/image/bird5.jpg",
+      "price": 12000
+    },
+    {
+      "id": 6,
+      "image": "/assets/image/bird6.jpg",
+      "price": 8000
+    }
+  ]
+}
